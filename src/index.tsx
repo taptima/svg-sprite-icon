@@ -13,6 +13,8 @@ export type PropsT = HTMLAttributes<HTMLElement> & {
 const Icon: FC<PropsT> = (props) => {
     const { icon, ...restProps } = props;
 
+    console.log({ icon }, {restProps});
+
     if (!icon || !icon.viewBox || !icon.id) {
         return null;
     }
